@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data: content:;">-->
+        <meta http-equiv="Content-Security-Policy" content="default-src *;img-src * 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/framework7.material.colors.min.css">
+        <link rel="stylesheet" type="text/css" href="css/framework7.material.min.css">
+        <link rel="stylesheet" type="text/css" href="css/framework7-icons.css">
+        <link rel="stylesheet" type="text/css" href="css/my-app.css">
+        <title>StockApp</title>
+    </head>
+    <body>
+            <!-- Views -->
+    <div class="views">
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Pages container, because we use fixed navbar and toolbar, it has additional appropriate classes-->
+        <div class="pages navbar-fixed">
+          <!-- Page, "data-page" contains page name -->
+          <div data-page="index" class="page">
+              <!-- Panels Overlay -->
+              <div class="panel-overlay"></div>
+             
+              <!-- Left Panel with Reveal effect -->
+              <div class="panel panel-right panel-cover">
+                <div class="content-block">
+                  <p>Menu</p>
+                  <!-- Click on link with "close-panel" class will close panel -->
+                  <p><a href="#" class="close-panel">Cerrar Sesion</a></p>
+                  <!-- Click on link with "open-panel" and data-panel="right" attribute will open Right panel -->
+                  <p><a href="#" data-panel="right" id="linkLogin" class="open-panel">Iniciar Sesion</a></p>
+                </div>
+              </div>
+            <!-- Top Navbar. In Material theme it should be inside of the page-->
+            <div class="navbar">
+                <div class="navbar-inner">
+                    <div class="left">
+                        <i class="f7-icons center">home</i>
+                    </div>
+                    <div class="center">Inicio</div>
+                    <div class="right">
+                        <a href="#" class="link icon-only open-panel">
+                            <i class="icon icon-bars"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> 
+            <!-- Scrollable page content -->
+            <div class="page-content">
+            
+<!-- Accordion -->
+<!-- Custom Accordion -->
+<div class="content-block-title">Custom Accordion</div>
+<div class="content-block list-block custom-accordion">
+  <div class="accordion-item">
+    <div class="accordion-item-toggle">
+      <i class="f7-icons">add_round</i>
+      <span>Item 1</span>
+    </div>
+    <div class="accordion-item-content">
+      <p>Item 1 content. Lorem ipsum dolor sit amet...</p>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <div class="accordion-item-toggle">
+      <i class="f7-icons">add_round</i>
+      <span>Item 2</span>
+    </div>
+    <div class="accordion-item-content">
+      <p>Item 2 content. Lorem ipsum dolor sit amet...</p>
+    </div>
+  </div>
+</div>  
+
+            </div><!--page-content-->
+          </div><!--page-->
+        </div><!--pages-->
+      </div><!--view view-main-->
+    </div><!--views-->
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/framework7.min.js"></script>
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/login.js"></script>
+        <script type="text/javascript" src="js/principal.js"></script>        
+    </body>
+</html>

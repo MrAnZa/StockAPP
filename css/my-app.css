@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.button-round{
+	color:darkgreen;
+	border-radius: 20px;
+	background-color: lightgreen !important;
+}
+.button-red{
+	font-weight: bolder;
+	color: #3B0B0B;
+	background-color: #FE2E2E !important;	
+}
+.button-green{
+	font-weight: bolder;
+	color: green;
+	background-color: lightgreen !important;	
+}
